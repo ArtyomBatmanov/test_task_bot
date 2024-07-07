@@ -1,3 +1,5 @@
-API_TOKEN = "7173898303:AAF6XBdPxCLc0vEBE0W8nqNlq1Y8ur8Ag0M"
+API_TOKEN = "Ваш токен полученный от Botfather"
 GOOGLE_SHEETS_CREDENTIALS_FILE = "credentials/google_sheets_credentials.json"
 SHEET_NAME = "гугл_табличка"
+SHOP_ID = "Ваш идентификатор магазина"
+SECRET_KEY = "Ваш секретный ключ"

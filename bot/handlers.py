@@ -1,6 +1,7 @@
 from telebot import types
 from .google_sheets import get_google_sheet_value, append_date_to_sheet
 from .utils import check_date_format
+from .payment import create_payment
 
 
 def register_handlers(bot):
@@ -24,9 +25,9 @@ def register_handlers(bot):
                 "Текст + ссылка на Яндекс карты: https://yandex.ru/maps/?text=Ленина%1",
             )
         elif message.text == "Кнопка 2":
+            payment_url = create_payment(2.00, "RUB", "Оплата 2 рубля")
             bot.send_message(
-                message.chat.id,
-                "Текст + ссылка на оплату 2 р: https://example.com/payment?amount=2",
+                message.chat.id, f"Текст + ссылка на оплату 2 р: {payment_url}"
             )
         elif message.text == "Кнопка 3":
             with open("images/img1.jpg", "rb") as photo:
